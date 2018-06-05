@@ -5,7 +5,8 @@ kyxap:~$ export PRITUNL_ADMIN_USER=admin
 kyxap:~$ export PRITUNL_ADMIN_PASSWORD=Theu3uereixei4
 kyxap:~$ export PRITUNL_WEB_URL=https://vpn.pro-manage.net:9700
 kyxap:~$ wget -q https://ip-ranges.amazonaws.com/ip-ranges.json -O - \
-  | jq '.prefixes[] | select(.region == "us-east-1") | select(.service == "EC2") | .ip_prefix' -r > aws-networks.txt
+  | jq -r '.prefixes[] | select(.region == "us-east-1") | select(.service == "EC2") | .ip_prefix' \
+  | tee aws-networks.txt
 kyxap:~$ xargs -n1 ./pritunl-api-client.sh < aws-networks.txt
 ```
 

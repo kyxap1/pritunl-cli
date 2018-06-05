@@ -1,9 +1,14 @@
+## Usage
+
+```bash
+kyxap@srv190515:/opt/src/pritunl-cli$ export PRITUNL_ADMIN_USER=admin
+kyxap@srv190515:/opt/src/pritunl-cli$ export PRITUNL_ADMIN_PASSWORD=Theu3uereixei4
+kyxap@srv190515:/opt/src/pritunl-cli$ export PRITUNL_WEB_URL=https://vpn.pro-manage.net:9700
+kyxap@srv190515:/opt/src/pritunl-cli$ ./pritunl-api-client.sh 172.16.26.0/24
+```
 ## Sample output
 
 ```bash
-kyxap@srv190515:/opt/src/pritunl-cli$ ./pritunl-api-client.sh 172.16.26.0/24
-```
-```
 HTTP/1.1 200 OK
 Cache-Control: no-cache, no-store, must-revalidate
 Content-Length: 41
